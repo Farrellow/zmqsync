@@ -26,11 +26,11 @@ class ZmqServer(threading.Thread):
 
     def run(self):
         #server_url = 'inproc://server'                  # 线程间通信
-        #server_url = 'ipc:///home/farrell/Study/zmq/1'  # 进程间通信
+        #server_url = 'ipc:///root/zmq/1'                # 进程间通信
         server_url = 'tcp://127.0.0.1:9876'             # 不同主机进程间通信
 
         worker_url = 'inproc://workers'                 # 线程间通信
-        #worker_url = 'ipc:///home/farrell/Study/zmq/0'  # 进程间通信
+        #worker_url = 'ipc:///root/zmq/0'               # 进程间通信
         #worker_url = 'tcp://192.168.14.208:9898'        # 不同主机进程间通信
 
         server = context.socket(zmq.ROUTER)
