@@ -7,7 +7,7 @@ context = zmq.Context.instance()
 class ZmqClient(object):
     def __init__(self, timeout):
         #server_url = 'inproc://server'                  # 线程间通信
-        #server_url = 'ipc:///home/farrell/Study/zmq/1'  # 进程间通信
+        #server_url = 'ipc:///root/zmq/1'                # 进程间通信
         server_url = 'tcp://127.0.0.1:9876'             # 不同主机进程间通信
 
         self.client = context.socket(zmq.REQ)
